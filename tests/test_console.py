@@ -9,6 +9,6 @@ import pep8
 from os import path, remove
 
 
-class TestConsole(unittest.TEstCase):
+class TestConsole(unittest.TestCase):
     """define variables and methods"""
     pass
