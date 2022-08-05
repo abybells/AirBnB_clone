@@ -11,9 +11,9 @@ from models.base_model import BaseModel
 class Place(BaseModel):
     'Place class'
 
-    city_id = ""
     user_id = ""
     name = ""
+    city_id = ""
     description = ""
     number_rooms = 0
     number_bathrooms = 0
