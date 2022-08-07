@@ -8,13 +8,13 @@ from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    'State class'
+    """ State class """
 
     name = ""
 
-    def __init__(self, *args, **kwargs):
-        '__init__ method for State'
-        if len(kwargs) > 0:
-            self.__dict__ = kwargs
-        else:
-            super().__init__(self)
+   # def __init__(self, *args, **kwargs):
+   #     '__init__ method for State'
+   #     if len(kwargs) > 0:
+   #         self.__dict__ = kwargs
+   #     else:
+   #         super().__init__(self)
