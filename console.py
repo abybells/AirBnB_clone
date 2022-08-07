@@ -211,7 +211,7 @@ class HBNBCommand(cmd.Cmd):
                             return
                         setattr(model_instance, attr, value)
 
-                        storage.reload()
+                        models.storage.reload()
                         files = models.storage.all()
                         update = {}
                         if self.check_for_id(files.keys(), model_id):
