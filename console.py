@@ -92,7 +92,7 @@ class HBNBCommand(cmd.Cmd):
 
         for model in self.MODELS:
             if class_name == model.__name__:
-                storage.reload()
+                models.storage.reload()
                 files = storage.all()
                 for k in files:
                     split_key = k.split(".")
@@ -125,8 +125,8 @@ class HBNBCommand(cmd.Cmd):
 
         for model in self.MODELS:
             if class_name == model.__name__:
-                storage.reload()
-                files = storage.all()
+                models.storage.reload()
+                files = models.storage.all()
                 dict_filter = {}
                 if self.check_for_id(files.keys(), model_id):
                     for k in files.keys():
