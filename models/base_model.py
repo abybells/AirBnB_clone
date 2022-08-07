@@ -24,12 +24,12 @@ class BaseModel:
         else:
             self.id = str(uuid.uuid1())
             self.created_at = datetime.now()
-            storage.new(self)
+            models.storage.new(self)
 
     def save(self):
         'save method'
         self.updated_at = datetime.now()
-        storage.save()
+        models.storage.save()
 
     def __str__(self):
         'str method'
