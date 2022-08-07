@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""
+Place module
+"""
 import uuid
 from datetime import datetime
-from models import storage
 from models.base_model import BaseModel
 
 
