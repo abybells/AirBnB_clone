@@ -1,7 +1,12 @@
 #!/usr/bin/python3
+"""
+0x00. AriBnB clone - The console
+Base_model module
+"""
 import uuid
 from datetime import datetime
-from models import storage
+import models
+
 
 'Module for BaseModel'
 
@@ -12,7 +17,7 @@ class BaseModel:
     'BaseModel class'
     def __init__(self, *args, **kwargs):
         'initialize data'
-        if len(kwargs) is not 0:
+        if len(kwargs) != 0:
             self.__dict__ = kwargs
             self.created_at = datetime.strptime(kwargs.get("created_at"),
                                                 format)
