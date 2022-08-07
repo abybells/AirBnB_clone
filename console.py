@@ -242,7 +242,7 @@ class HBNBCommand(cmd.Cmd):
 
             models.storage.reload()
             count = 0
-            files = storage.all()
+            files = models.storage.all()
             for k in files.keys():
                 if k.split(".")[0] == class_name:
                     count += 1
