@@ -146,7 +146,7 @@ class HBNBCommand(cmd.Cmd):
         Usage: all <class> | all or <class>.all()
         Ex: all BaseModel or all"""
         my_list = []
-        storage.reload()
+        models.storage.reload()
         files = storage.all()
         if line:
             class_name = line.split()[0]
