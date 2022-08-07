@@ -147,7 +147,7 @@ class HBNBCommand(cmd.Cmd):
         Ex: all BaseModel or all"""
         my_list = []
         models.storage.reload()
-        files = storage.all()
+        files = models.storage.all()
         if line:
             class_name = line.split()[0]
             for model in self.MODELS:
@@ -191,7 +191,7 @@ class HBNBCommand(cmd.Cmd):
         for model in self.MODELS:
             if class_name == model.__name__:
                 # storage.reload()
-                files = storage.all()
+                files = models.storage.all()
                 for k in files:
                     split_key = k.split(".")
                     if (len(model_id) - len(model_id.strip('\"')) == 2 or
@@ -212,7 +212,7 @@ class HBNBCommand(cmd.Cmd):
                         setattr(model_instance, attr, value)
 
                         storage.reload()
-                        files = storage.all()
+                        files = models.storage.all()
                         update = {}
                         if self.check_for_id(files.keys(), model_id):
                             for k in files.keys():
@@ -240,7 +240,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** class doesn't exist **")
                 return
 
-            storage.reload()
+            models.storage.reload()
             count = 0
             files = storage.all()
             for k in files.keys():
