@@ -4,9 +4,10 @@
 import unittest
 import uuid
 import os
+import models
 from models.user import User
 from models import storage
-from models.base_model import BaseModel
+# from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 
 
