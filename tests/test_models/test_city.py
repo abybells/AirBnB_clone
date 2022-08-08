@@ -10,7 +10,7 @@ from os import path, remove
 import datetime
 #import models
 # from models import base_model
-from .models import city
+from models import city
 # from models.base_model import BaseModel
 from models.city import City
 # from models import engine
