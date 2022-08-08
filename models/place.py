@@ -24,10 +24,7 @@ class Place(BaseModel):
     latitude = 0.0
     longitude = 0.0
     amenity_ids = []
-
-   # def __init__(self, *args, **kwargs):
-   #     '__init__ method for place'
-   #     if len(kwargs) > 0:
-   #         self.__dict__ = kwargs
-   #     else:
-   #         super().__init__(self)
+    
+    # def __init__(self, *args, **kwargs):
+    #     """initialize variables and methods"""
+    #     super().__init__(self, *args, **kwargs)
