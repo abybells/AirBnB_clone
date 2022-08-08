@@ -1,17 +1,16 @@
 #!/usr/bin/python3
 """
-city module
+0x00. AirBnB clone - The console
+City module
 """
-import uuid
-from datetime import datetime
 from models.base_model import BaseModel
 
 
-'Module for City'
-
-
 class City(BaseModel):
-    'City class'
+    """
+    Defines attributes/methods for the City class, subclass of BaseModel
+    Other attributes/methods are inherited from BaseModel
+    """
 
     state_id = ""
     name = ""
