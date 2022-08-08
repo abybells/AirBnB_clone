@@ -15,10 +15,7 @@ class City(BaseModel):
 
     state_id = ""
     name = ""
-
-   # def __init__(self, *args, **kwargs):
-   #     '__init__ method for City'
-   #     if len(kwargs) > 0:
-   #         self.__dict__ = kwargs
-   #     else:
-   #         super().__init__(self)
+    
+    # def __init__(self, *args, **kwargs):
+    #     """initialize variables and methods"""
+    #     super().__init__(self, *args, **kwargs)
