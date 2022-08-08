@@ -8,7 +8,7 @@ import unittest
 import pep8
 from os import path, remove
 import datetime
-import models
+# import models
 # from models import base_model
 # from models import city
 # from models.base_model import BaseModel
