@@ -5,7 +5,7 @@ Base_model module
 """
 import uuid
 import datetime
-from models import storage
+from models import models.storage
 
 
 class BaseModel:
