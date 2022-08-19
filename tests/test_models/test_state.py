@@ -82,7 +82,7 @@ class TestState(unittest.TestCase):
 
     def test_docstring_presence(self):
         """Test that Module, Class, and methods all have a docstring"""
-        self.assertIsNot(state.__doc__, None)
+        self.assertIsNot(State.__doc__, None)
         self.assertIsNot(State.__doc__, None)
         self.assertIsNot(State.__init__.__doc__, None)
         self.assertIsNot(State.save.__doc__, None)

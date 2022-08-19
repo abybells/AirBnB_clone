@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     margin: 0;
     padding: 0;
@@ -13,3 +14,35 @@ body {
     margin-right: auto;
     margin-left: auto;
   }
+=======
+html, body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+}
+
+html {
+  position: relative;
+}
+
+body {
+    color: #484848;
+    font-size: 14px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+ul {
+  list-style: none;
+  padding: 10px;
+}
+>>>>>>> 5642938af435eb66bb6213d4d60ac54de9f683f5

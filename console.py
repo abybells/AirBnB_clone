@@ -4,6 +4,7 @@
 
 import cmd
 import json
+import models
 from models.amenity import Amenity
 from models.base_model import BaseModel
 from models.city import City
@@ -11,13 +12,12 @@ from models.place import Place
 from models.review import Review
 from models.state import State
 from models.user import User
-from models import storage
+# from models import storage
 
 
 class HBNBCommand(cmd.Cmd):
     """command line terminal for HBNB"""
 
-    intro = "WELCOME TO HBNB SHELL"
     prompt = '(hbnb) '
     MODELS = [Amenity, BaseModel, City, Place, Review, State, User]
 
@@ -91,8 +91,8 @@ class HBNBCommand(cmd.Cmd):
 
         for model in self.MODELS:
             if class_name == model.__name__:
-                storage.reload()
-                files = storage.all()
+                models.storage.reload()
+                files = models.storage.all()
                 for k in files:
                     split_key = k.split(".")
                     if (len(model_id) - len(model_id.strip('\"')) == 2 or
@@ -124,8 +124,8 @@ class HBNBCommand(cmd.Cmd):
 
         for model in self.MODELS:
             if class_name == model.__name__:
-                storage.reload()
-                files = storage.all()
+                models.storage.reload()
+                files = models.storage.all()
                 dict_filter = {}
                 if self.check_for_id(files.keys(), model_id):
                     for k in files.keys():
@@ -145,8 +145,8 @@ class HBNBCommand(cmd.Cmd):
         Usage: all <class> | all or <class>.all()
         Ex: all BaseModel or all"""
         my_list = []
-        storage.reload()
-        files = storage.all()
+        models.storage.reload()
+        files = models.storage.all()
         if line:
             class_name = line.split()[0]
             for model in self.MODELS:
@@ -190,7 +190,7 @@ class HBNBCommand(cmd.Cmd):
         for model in self.MODELS:
             if class_name == model.__name__:
                 # storage.reload()
-                files = storage.all()
+                files = models.storage.all()
                 for k in files:
                     split_key = k.split(".")
                     if (len(model_id) - len(model_id.strip('\"')) == 2 or
@@ -210,8 +210,8 @@ class HBNBCommand(cmd.Cmd):
                             return
                         setattr(model_instance, attr, value)
 
-                        storage.reload()
-                        files = storage.all()
+                        models.storage.reload()
+                        files = models.storage.all()
                         update = {}
                         if self.check_for_id(files.keys(), model_id):
                             for k in files.keys():
@@ -239,9 +239,9 @@ class HBNBCommand(cmd.Cmd):
                 print("** class doesn't exist **")
                 return
 
-            storage.reload()
+            models.storage.reload()
             count = 0
-            files = storage.all()
+            files = models.storage.all()
             for k in files.keys():
                 if k.split(".")[0] == class_name:
                     count += 1
